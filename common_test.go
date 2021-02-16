@@ -13,9 +13,9 @@ import (
 )
 
 var (
-	kNone1    noneType   = 1
-	kNone2    noneType   = 2
-	kNone3    noneType   = 3
+	kNone1    noneType
+	kNone2    noneType
+	kNone3    noneType
 	kSingle1  singleType = "one"
 	kSingle2  singleType = "two"
 	kSingle3  singleType = "three"
@@ -96,7 +96,8 @@ type fooType interface {
 	ToString() string
 }
 
-type noneType int
+type noneType struct {
+}
 
 func (n noneType) ToString() string {
 	return "NONE"

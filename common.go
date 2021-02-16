@@ -14,12 +14,12 @@ import (
 // Join implements the composite patten.
 // Let T be an arbitrary interface.
 // aSlice is a []T consisting of the T values to be joined.
-// aggregate is an arbitrary value of type U that implements T and has an
+// aggregate is a value of type U that implements T and has an
 // underlying type []T.
-// Caller usually passes nil for aggregate as aggregate is only used for
+// Caller passes nil for aggregate as aggregate is only used for
 // reflection.
-// none is of some arbitrary type V that implements T and represents no T
-// values.
+// none is a value of type V that implements T and has an underlying type
+// struct{} that represents no T values.
 // Join returns some value of type T.
 // Join returns none if aSlice is empty or consists only of values of type V.
 // If aSlice contains only one T value that is not of type V, Join returns that
